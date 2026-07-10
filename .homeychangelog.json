@@ -1735,5 +1735,11 @@
   },
   "3.41.5": {
     "en": "Add message to timeline/devices which will tell  users that the Eufy Notifications are broken"
+  },
+  "3.42.0": {
+    "en": "FIX: push notifications not coming trough"
+  },
+  "3.42.1": {
+    "en": "FIX: implement legacy and V6 push notifications to make sure non-migrated accounts can still use it"
   }
 }
