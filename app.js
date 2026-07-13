@@ -394,12 +394,11 @@ class App extends Homey.App {
         try {
             const region = this.appSettings.REGION;
 
-            if(region === 'EU') {
-                this.warn('setEufyClient - Region is set to EU, but Eufy Security EU servers are not supported. Changing to a EU country automatically.');
+            if(region === 'UK' || region === 'EN') {
+                this.warn(`setEufyClient - Region is set to ${region}, but Eufy Security ${region} servers are not supported. Changing to a EU country automatically.`);
                 await this.updateSettings({
                     ...this.appSettings,
-                    REGION: 'EN',
-                    COUNTRY: 'UK'
+                    REGION: 'EU'
                 });
             }
 
@@ -483,6 +482,11 @@ class App extends Homey.App {
                     excerpt: 'Eufy Security - Captcha required'
                 });
             }
+        });
+
+        this.eufyClient.on('connection error', (error) => {
+            this.eufyClientError = error && error.context && error.context.message;
+            this.warn('Event: connection error', this.eufyClientError);
         });
 
         this.eufyClient.on('persistent data', async (data) => {

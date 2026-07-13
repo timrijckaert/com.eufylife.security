@@ -1,1 +1,1 @@
-ntfy2026070201|[Eufy Security] - Eufy is migrating its system and phasing out the old one this app uses. Notifications and event images may be unreliable for now. This is on Eufy's side — details here: https://tinyurl.com/eufy-homey/info
+ntfy2026071301|[Eufy Security] - Eufy is migrating its system and phasing out the old one this app uses. Notifications and event images may be unreliable for now. This is on Eufy's side — details here: https://tinyurl.com/eufy-homey-info

@@ -1741,5 +1741,17 @@
   },
   "3.42.1": {
     "en": "FIX: implement legacy and V6 push notifications to make sure non-migrated accounts can still use it"
+  },
+  "3.42.2": {
+    "en": "FIX: (re)pairing of devices didn’t work after V6 changes of Eufy SDK"
+  },
+  "3.42.3": {
+    "en": "FIX: (re)pairing of devices didn’t work after V6 changes of Eufy SDK"
+  },
+  "3.42.4": {
+    "en": "FIX: (re)pairing of devices didn’t work after V6 changes of Eufy SDK"
+  },
+  "3.42.5": {
+    "en": "FIX: (re)pairing of devices didn’t work after V6 changes of Eufy SDK"
   }
 }

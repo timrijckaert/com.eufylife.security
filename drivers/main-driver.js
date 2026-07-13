@@ -97,6 +97,11 @@ module.exports = class mainDriver extends Homey.Driver {
                             return session.showView('done');
                         } else if (this._devices && this._devices.length) {
                             session.showView('list_devices');
+                        } else if (this.homey.app.eufyClientError) {
+                            this.deviceError = this.homey.app.eufyClientError;
+                            this.homey.app.eufyClientError = false;
+
+                            session.showView('error');
                         } else if (this._devices && !!this._devices.info) {
                             this.deviceError = this._devices.info;
 
@@ -107,7 +112,15 @@ module.exports = class mainDriver extends Homey.Driver {
                             session.showView('error');
                         }
                     } else {
-                        this.deviceError = this.type === 'repair' ? this.homey.__('pair.no_devices_repair') : this.homey.__('pair.no_devices');
+                        if (this.homey.app.eufyClientError) {
+                            this.deviceError = this.homey.app.eufyClientError;
+                            this.homey.app.eufyClientError = false;
+
+                            session.showView('error');
+                        } else {
+                            this.deviceError = this.type === 'repair' ? this.homey.__('pair.no_devices_repair') : this.homey.__('pair.no_devices');
+                        }
+                        
                         session.showView('error');
 
                         return [];
