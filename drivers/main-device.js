@@ -181,7 +181,7 @@ module.exports = class mainDevice extends Homey.Device {
             const properties = [PropertyName.DeviceBatteryTemp, PropertyName.DeviceBattery, PropertyName.DeviceEnabled, PropertyName.DeviceSensorOpen, PropertyName.StationGuardMode];
             const eufyDeviceOrStation = this.EufyDevice || this.EufyStation;
 
-            for (const property in properties) {
+            for (const property of properties) {
                 if (await eufyDeviceOrStation.hasProperty(property)) {
                     this.homey.app.eufyEventsHelper.updateDeviceProperties(this, eufyDeviceOrStation, property, await eufyDeviceOrStation.getPropertyValue(property));
                 }
