@@ -10,7 +10,7 @@
     "pretty": "prettier --write \"./drivers/**/*.json\""
   },
   "dependencies": {
-    "eufy-security-client": "github:martijnpoppen/eufy-security-client#claude/eufy-app-memory-limit-3y26yq",
+    "eufy-security-client": "github:martijnpoppen/eufy-security-client#homey-integration",
     "fluent-ffmpeg": "^2.1.3"
   }
 }
