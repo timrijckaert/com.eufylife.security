@@ -1753,5 +1753,8 @@
   },
   "3.42.5": {
     "en": "FIX: (re)pairing of devices didn’t work after V6 changes of Eufy SDK"
+  },
+  "3.42.6": {
+    "en": "FIX: app crashes due to Eufy API changes. (this wont fix broken events)"
   }
 }
