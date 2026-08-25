@@ -1756,5 +1756,8 @@
   },
   "3.42.6": {
     "en": "FIX: app crashes due to Eufy API changes. (this wont fix broken events)"
+  },
+  "3.42.7": {
+    "en": "FIX: app crashes due to Eufy API changes. (this wont fix broken events)"
   }
 }
